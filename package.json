@@ -1,6 +1,6 @@
 {
   "name": "splunk-storm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "client for the splunkstorm api",
   "homepage": "https://github.com/zaphod1984/splunk-storm",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "client"
   ],
   "scripts": {
-      "test": "./node_modules/.bin/mocha tests"
+    "test": "./node_modules/.bin/mocha tests"
   },
   "dependencies": {
     "request": "^2.45.0"
