@@ -12,7 +12,9 @@
     "splunk",
     "splunk-storm",
     "logging",
-    "client"
+    "client",
+    "logs",
+    "log aggregation"
   ],
   "scripts": {
     "test": "./node_modules/.bin/mocha tests"
