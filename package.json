@@ -1,6 +1,6 @@
 {
   "name": "splunk-storm",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "client for the splunkstorm api",
   "homepage": "https://github.com/zaphod1984/splunk-storm",
   "main": "index.js",
