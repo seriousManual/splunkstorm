@@ -1,0 +1,35 @@
+{
+  "name": "splunk-storm",
+  "version": "0.0.0",
+  "description": "client for the splunkstorm api",
+  "homepage": "https://github.com/zaphod1984/splunk-storm",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaphod1984/splunk-storm"
+  },
+  "keywords": [
+    "splunk",
+    "splunk-storm",
+    "logging",
+    "client"
+  ],
+  "scripts": {
+      "test": "./node_modules/.bin/mocha tests"
+  },
+  "dependencies": {
+    "request": "^2.45.0"
+  },
+  "author": "Manuel Ernst <zaphod84@gmx.de>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.4",
+    "proxyquire": "^1.0.1",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.6.0"
+  }
+}
