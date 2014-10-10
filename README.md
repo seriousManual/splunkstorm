@@ -20,7 +20,7 @@ If you don't already have one, you can get one from http://www.splunkstorm.com
 From your freshly set up account you'll need the SplunkStorm credentials the consist of your access token, your project Id and a API Hostname:
 
 <p align="center">
-  <img src="https://raw.github.com/zaphod1984/splunk-storm/master/img/credentials.png" width="250" />
+  <img src="https://raw.github.com/zaphod1984/splunk-storm/master/img/credentials.png" width="350" />
 </p>
 
 ````javascript
