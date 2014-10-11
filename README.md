@@ -1,15 +1,13 @@
-Fork of the abondoned [splunkstorm](https://github.com/coccyx/splunkstorm) project.
+# splunkstorm [![Build Status](https://travis-ci.org/zaphod1984/splunkstorm.png)](https://travis-ci.org/zaphod1984/splunkstorm)
 
-# Splunk-Storm [![Build Status](https://travis-ci.org/zaphod1984/splunk-storm.png)](https://travis-ci.org/zaphod1984/splunk-storm)
+[![NPM](https://nodei.co/npm/splunkstorm.png)](https://nodei.co/npm/splunkstorm/)
 
-[![NPM](https://nodei.co/npm/splunk-storm.png)](https://nodei.co/npm/splunk-storm/)
-
-[![NPM](https://nodei.co/npm-dl/splunk-storm.png?months=3)](https://nodei.co/npm/splunk-storm/)
+[![NPM](https://nodei.co/npm-dl/splunkstorm.png?months=3)](https://nodei.co/npm/splunkstorm/)
 
 ## Installation
 
 ````bash
-$ npm i splunk-storm --save
+$ npm i splunkstorm --save
 ````
 
 ## Usage
@@ -20,11 +18,11 @@ If you don't already have one, you can get one from http://www.splunkstorm.com
 From your freshly set up account you'll need the SplunkStorm credentials the consist of your access token, your project Id and a API Hostname:
 
 <p align="center">
-  <img src="https://raw.github.com/zaphod1984/splunk-storm/master/img/credentials.png" width="350" />
+  <img src="https://raw.github.com/zaphod1984/splunkstorm/master/img/credentials.png" width="350" />
 </p>
 
 ````javascript
-var SplunkStorm = require('splunk-storm');
+var SplunkStorm = require('splunkstorm');
 
 var logger = new SplunkStorm({
     apiKey: 'you-api-key',

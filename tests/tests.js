@@ -2,7 +2,7 @@ var expect = require('chai').use(require('sinon-chai')).expect;
 var proxyquire = require('proxyquire');
 var sinon = require('sinon');
 
-describe('splunk-storm', function() {
+describe('splunkstorm', function() {
     var requestMock = sinon.spy(function(options, callback) {
         callback(requestMock._return.error, requestMock._return.result);
     });

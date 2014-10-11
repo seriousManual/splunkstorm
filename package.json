@@ -1,16 +1,16 @@
 {
-  "name": "splunk-storm",
-  "version": "1.0.0",
+  "name": "splunkstorm",
+  "version": "0.1.0",
   "description": "client for the splunkstorm api",
-  "homepage": "https://github.com/zaphod1984/splunk-storm",
+  "homepage": "https://github.com/zaphod1984/splunkstorm",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaphod1984/splunk-storm"
+    "url": "https://github.com/zaphod1984/splunkstorm"
   },
   "keywords": [
     "splunk",
-    "splunk-storm",
+    "splunkstorm",
     "logging",
     "client",
     "logs",
