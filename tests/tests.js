@@ -37,7 +37,7 @@ describe('splunkstorm', function() {
         });
     });
 
-    it('should call the API /w params', function() {
+    it('should call the API /w params (string as message)', function() {
         requestMock._return = {error: null, result: 'fooBar'};
 
         logger.send('foo', 'fooSourceType', 'fooHost', 'fooSource', function(error) {
@@ -47,6 +47,23 @@ describe('splunkstorm', function() {
         expect(requestMock).to.be.calledOnce;
         expect(requestMock).to.be.calledWith({
             body: "foo",
+            headers: { Authorization: "Basic OmZvb0FwaUtleQ==" },
+            maxSockets: 1,
+            method: "POST",
+            uri: "https://fooApiHostName/1/inputs/http?project=fooProjectId&sourcetype=fooSourceType&host=fooHost&source=fooSource"
+        });
+    });
+
+    it('should call the API /w params (object as message)', function() {
+        requestMock._return = {error: null, result: 'fooBar'};
+
+        logger.send({foo: 'bar'}, 'fooSourceType', 'fooHost', 'fooSource', function(error) {
+            expect(error).to.be.null;
+        });
+
+        expect(requestMock).to.be.calledOnce;
+        expect(requestMock).to.be.calledWith({
+            body: "{\"foo\":\"bar\"}",
             headers: { Authorization: "Basic OmZvb0FwaUtleQ==" },
             maxSockets: 1,
             method: "POST",
