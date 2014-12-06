@@ -48,7 +48,7 @@ It accepts a options hash consisting of:
 ### Splunkstorm#send(logMessage, sourceType, host, source, callback)
 The `send` method is used to send acctual log messages and accepts five parameters:
 
-* `message`: accepts strings and opbjects, if an object has been assigned it will automatically be json-stringified. Note that splunk recommends the usage of key-value pairs: http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+* `message`: accepts strings and objects, if an object has been assigned it will automatically be json-stringified. Note that splunk recommends the usage of key-value pairs: http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
 * `sourceType`: the source of the log message, defaults to syslog
 * `host`: the hostname, optional
 * `source`: specify a source, optional
