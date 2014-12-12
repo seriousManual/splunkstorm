@@ -3,10 +3,16 @@ var qs = require('querystring');
 
 var request = require('request');
 
-function SplunkStorm (options) {
+var JSONFormatter = require('./lib/JSONFormatter');
+var KVPFormatter = require('./lib/KVPFormatter');
+
+function SplunkStorm(options) {
     this._apiKey = options.apiKey;
     this._projectId = options.projectId;
     this._apiUrl = util.format('https://%s/1/inputs/http', options.apiHostName);
+    this._formatter = options.formatter === 'json' ?
+        new JSONFormatter() :
+        new KVPFormatter();
 }
 
 SplunkStorm.prototype.send = function (logMessage, sourceType, host, source, callback) {
@@ -23,7 +29,9 @@ SplunkStorm.prototype.send = function (logMessage, sourceType, host, source, cal
     var queryString = qs.stringify(params);
     var url = this._apiUrl + '?' + queryString;
 
-    if (typeof logMessage === 'object') logMessage = JSON.stringify(logMessage);
+    if (typeof logMessage === 'object') {
+        logMessage = this._formatter.format(logMessage);
+    }
 
     var options = {
         maxSockets: 1,
@@ -35,7 +43,7 @@ SplunkStorm.prototype.send = function (logMessage, sourceType, host, source, cal
         }
     };
 
-    request(options, function(error) {
+    request(options, function (error) {
         callback(error);
     });
 };
