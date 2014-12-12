@@ -61,7 +61,7 @@ Splunk advocates the usage of key-value pairs in their Best-Practices section: h
  Because of this starting with v2.0 `splunkstorm` will convert every non string value to a key-value pair string representation.
  By using the `formatter` option for the `splunkstorm` constructor one can opt into the legacy method of JSON-stringifying.
  
- ### Examples
+### Examples
  
  object  | string representation
  ------------- | -------------
