@@ -14,13 +14,14 @@
     "logging",
     "client",
     "logs",
-    "log aggregation"
+    "log aggregation",
+    "key value pairs"
   ],
   "scripts": {
     "test": "./node_modules/.bin/mocha tests"
   },
   "dependencies": {
-    "request": "^2.45.0"
+    "request": "^2.51.0"
   },
   "author": "Manuel Ernst <zaphod84@gmx.de>",
   "license": "MIT",
@@ -29,7 +30,7 @@
   },
   "devDependencies": {
     "chai": "^1.9.2",
-    "mocha": "^1.21.4",
+    "mocha": "^2.0.1",
     "proxyquire": "^1.0.1",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.6.0"
